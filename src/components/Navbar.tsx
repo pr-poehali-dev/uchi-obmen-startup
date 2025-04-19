@@ -40,7 +40,10 @@ const Navbar = () => {
         
         <div className="flex items-center gap-4">
           <Button variant="outline">Войти</Button>
-          <Button className="bg-skyblue text-skyblue-foreground hover:bg-skyblue-dark">
+          <Button 
+            className="bg-skyblue text-skyblue-foreground hover:bg-skyblue-dark"
+            onClick={() => window.open("https://i.pinimg.com/736x/3b/75/c8/3b75c87eb38ee22e63d6607901493865.jpg", "_blank")}
+          >
             <Download className="mr-2 h-4 w-4" />
             Скачать приложение
           </Button>
