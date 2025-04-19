@@ -13,20 +13,27 @@ const Navbar = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/features">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              {/* Используем NavigationMenuLink напрямую вместо вложенного Link */}
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link to="/features">
                   <BookOpen className="mr-2 h-4 w-4" />
                   Возможности
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/community">
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink
+                asChild
+                className={navigationMenuTriggerStyle()}
+              >
+                <Link to="/community">
                   <Users className="mr-2 h-4 w-4" />
                   Сообщество
-                </NavigationMenuLink>
-              </Link>
+                </Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
